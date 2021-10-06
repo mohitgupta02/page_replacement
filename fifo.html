@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FIFO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    table,
+    tr,
+    td {
+      border: solid;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"></a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+        data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="belady.html" class="nav-link"><span>Beladys Anomaly</span></a></li>
+          <li class="nav-item"><a href="fifo.html" class="nav-link"><span>FIFO</span></a></li>
+          <li class="nav-item"><a href="lifo.html" class="nav-link"><span>LIFO</span></a></li>
+          <li class="nav-item"><a href="lru.html" class="nav-link"><span>LRU</span></a></li>
+          <li class="nav-item"><a href="optimal.html" class="nav-link"><span>Optimal</span></a></li>
+          <li class="nav-item"><a href="random.html" class="nav-link"><span>Random</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="hero-wrap js-fullheight">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+        <div class="col-lg-10 ftco-animate d-flex align-items-center">
+          <div class="text text-center">
+            <h1 class="mb-3 bread">FIFO</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="ftco-animate">
+          <p>This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all
+            pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be
+            replaced page in the front of the queue is selected for removal.<br><br>
+
+            Example-1Consider page reference string 1, 3, 0, 3, 5, 6 with 3 page frames.Find number of page
+            faults.<br><br>
+
+
+            Initially all slots are empty, so when 1, 3, 0 came they are allocated to the empty slots —> 3 Page Faults.
+            when 3 comes, it is already in memory so —> 0 Page Faults.
+            Then 5 comes, it is not available in memory so it replaces the oldest page slot i.e 1. —>1 Page Fault.
+            6 comes, it is also not available in memory so it replaces the oldest page slot i.e 3 —>1 Page Fault.
+            Finally when 3 come it is not avilable so it replaces 0 1 page fault<br></p>
+          <p>
+            <img src="images/fifo.jpeg" alt="" class="img-fluid">
+          </p>
+
+          <div class="tag-widget post-tag-container mb-5 mt-5">
+            <div class="tagcloud">
+              <a href="#" class="tag-cloud-link">Life</a>
+              <a href="#" class="tag-cloud-link">Sport</a>
+              <a href="#" class="tag-cloud-link">Tech</a>
+              <a href="#" class="tag-cloud-link">Travel</a>
+            </div>
+          </div>
+          <br><br>
+          <div id="algo">
+            <div class="container">
+              <strong>Reference String:</strong>
+              <input class="input" type="text" style="width: 55%;" id="input">
+              <strong>Frames:</strong> <input class="input" type="number" id="frames" style="width: 10%;" min=1 max=10>
+              <button class="input" id="submit" style="width: 10%;">Submit</button>
+              <div>
+                <br>
+                <table id="table" class="container text-center">
+                </table>
+                <br>
+                <div id="summary" class="d-flex justify-content-around font-weight-bold text-uppercase"> </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- .col-md-8 -->
+      </div>
+    </div>
+  </section> <!-- .section -->
+
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Links</h2>
+            <ul class="list-unstyled">
+              <li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
+              <li class="nav-item"><a href="belady.html" class="nav-link"><span>Beladys Anomaly</span></a></li>
+              <li class="nav-item"><a href="fifo.html" class="nav-link"><span>FIFO</span></a></li>
+              <li class="nav-item"><a href="lifo.html" class="nav-link"><span>LIFO</span></a></li>
+              <li class="nav-item"><a href="lru.html" class="nav-link"><span>LRU</span></a></li>
+              <li class="nav-item"><a href="optimal.html" class="nav-link"><span>Optimal</span></a></li>
+              <li class="nav-item"><a href="random.html" class="nav-link"><span>Random</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" /></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/fifo.js"></script>
+</body>
+
+</html>
