@@ -7,4 +7,4 @@ It shows various page replacement algorithms along with Belady's Anomaly.
 - Random
 - Belady's Anomaly
 # Live Deployment Link
-https://kkataria3010.github.io/OS_Page_Replacement/
+https://mohitgupta02.github.io/page_replacement/
